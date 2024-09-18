@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: Int!
+  description: String!
+  completed: Boolean!
+}
+
+type Query {
+  """Prueba con Graphql"""
+  agustinmiquel: String!
+
+  """usando argumento"""
+  randomNumber(to: Float!): Float!
+  todos: [Todo!]!
+  todo(id: Int!): Todo!
+}
+
+type Mutation {
+  createTodo(createTodoInput: createDtoInput!): Todo!
+  deleteTodo(id: Int!): Boolean!
+  updateTodo(updateTodoInput: updateDtoInput!): Todo!
+}
+
+input createDtoInput {
+  """Whats need to be done"""
+  description: String!
+}
+
+input updateDtoInput {
+  id: Float!
+  description: String!
+  completed: Boolean!
+}
